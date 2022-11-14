@@ -117,7 +117,7 @@
     <AndroidResource Include="Resources\drawable\pressed.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\xml\Method.xml" />
+    <AndroidResource Include="Resources\xml\method.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\xml\Qwerty.xml" />

@@ -9167,7 +9167,7 @@ namespace CustomKeyboardDemo
 			public const int image_share_filepaths = 2131755008;
 			
 			// aapt resource value: 0x7F100001
-			public const int Method = 2131755009;
+			public const int method = 2131755009;
 			
 			// aapt resource value: 0x7F100002
 			public const int Qwerty = 2131755010;

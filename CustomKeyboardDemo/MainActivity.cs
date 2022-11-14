@@ -8,9 +8,9 @@ using Java.Lang;
 
 namespace CustomKeyboardDemo
 {
-    //[Service(Permission = "android.permission.BIND_INPUT_METHOD", Label = "CUSTOMKEYBOARD", Exported = true, Enabled = true)]
-    //[MetaData("android.view.im", Resource = "@xml/Method")]
-    //[IntentFilter(new string[] { "android.view.InputMethod" })]
+    [Service(Permission = "android.permission.BIND_INPUT_METHOD", Label = "CUSTOMKEYBOARD", Exported = true)]
+    [MetaData("android.view.im", Resource = "@xml/method")]
+    [IntentFilter(new string[]{"android.view.InputMethod"})]
     [System.Obsolete]
     public class MainActivity : InputMethodService, KeyboardView.IOnKeyboardActionListener
     {
@@ -20,17 +20,18 @@ namespace CustomKeyboardDemo
 
         public override View OnCreateInputView()
         {
-            //_keyboardView = (KeyboardView)LayoutInflater.Inflate(Resource.Layout.activity_main, null);
-            //_keyboard = new Keyboard(this, Resource.Xml.Qwerty);
-            //_keyboardView.Keyboard = _keyboard;
-            //_keyboardView.OnKeyboardActionListener = this;
+            _keyboardView = (KeyboardView)LayoutInflater.Inflate(Resource.Layout.activity_main, null);
+            _keyboard = new Keyboard(this, Resource.Xml.Qwerty);
+            _keyboardView.Keyboard = _keyboard;
+            _keyboardView.OnKeyboardActionListener = this;
 
-            //return _keyboardView;
-            return null;
+            return _keyboardView;
         }
         public void OnKey([GeneratedEnum] Android.Views.Keycode primaryCode, [GeneratedEnum] Android.Views.Keycode[] keyCodes)
         {
-            
+           
+                   
+               
         }
 
         public void OnPress([GeneratedEnum] Android.Views.Keycode primaryCode)
